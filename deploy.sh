@@ -9,14 +9,14 @@ echo "--=== Run local Tests on Deployment ===--"
 echo "No tests yet Defined"
 echo "-----------------------------------------"
 
-echo "--=== Modify Version Information ===--"
-echo "Version $1" > ./www/version.html
-ls  -l
-echo "--------------------------------------"
+#echo "--=== Modify Version Information ===--"
+#echo "Version $1" > ./www/version.html
+#ls  -l
+#echo "--------------------------------------"
 
 echo "--=== Transfer files to remote Server ===--"
 echo "rsync -avzhe ssh  --rsync-path="""rsync""" ./server/ jenkins@$2:$3"""
-rsync -avzhe ssh  --rsync-path="rsync" ./server/bin ./server/rest/node_modules/* ./server/rest/src/* ./server/rest/resources/* jenkins@$2:$3
+rsync -avzhe ssh  --rsync-path="rsync" ./server/bin ./server/rest/node_modules ./server/rest/src ./server/rest/resources jenkins@$2:$3
 echo "---------------------------------------"
 
 echo "----====== Start up Service ======----"
