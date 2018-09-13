@@ -3,4 +3,4 @@
 npm rebuild zeromq
 
 cd ../src
-node index.js
+node index.js &&
