@@ -16,11 +16,11 @@ echo "-----------------------------------------"
 
 echo "--=== Transfer files to remote Server ===--"
 echo "rsync -avzhe ssh  --rsync-path="""rsync""" ./server/ jenkins@$2:$3"""
-rsync -avzhe ssh  --rsync-path="rsync" ./server/bin ./server/rest/node_modules ./server/rest/src ./server/rest/resources jenkins@$2:$3
+rsync -avzhe ssh  --rsync-path="rsync" ./server/bin ./server/rest jenkins@$2:$3
 echo "---------------------------------------"
 
 echo "----====== Start up Service ======----"
-ssh -p 22 $2 "cd $3/bin ; pwd ; ./run.sh &&"
+ssh -p 22 $2 "cd $3/bin ; pwd ; chmod +x ./run.sh; ./run.sh &&"
 echo "---------------------------------------"
 
 echo "----====== Verify Deployments-List from Remote ======----"
