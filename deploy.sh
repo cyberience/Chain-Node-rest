@@ -20,11 +20,7 @@ rsync -avzhe ssh  --rsync-path="rsync" ./server/bin ./server/rest/node_modules .
 echo "---------------------------------------"
 
 echo "----====== Start up Service ======----"
-ssh -p 22 $2 "cd $3/bin"
-ssh -p 22 $2 "pwd"
-ssh -p 22 $2 "ls -l"
-ssh -p 22 $2 "chmod +x ./run.sh"
-ssh -p 22 $2 "./run.sh &&"
+ssh -p 22 $2 "cd $3bin; pwd; ls -la; chmod +x $3bin/run.sh; ./run.sh"
 echo "---------------------------------------"
 
 echo "----====== Verify Deployments-List from Remote ======----"
