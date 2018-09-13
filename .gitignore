@@ -1,1 +1,12 @@
+*~
+__pycache__/
+catapult-*.log*
+npm-*.log*
+.idea
+.vscode/
+typings.json
+typings/
+jsconfig.json
+.nyc_output/
 
+rest/coverage
