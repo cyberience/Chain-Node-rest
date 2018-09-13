@@ -1,5 +1,4 @@
 *~
-_build*/
 __pycache__/
 catapult-*.log*
 npm-*.log*
