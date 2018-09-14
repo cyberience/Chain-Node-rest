@@ -29,5 +29,6 @@ echo "---------------------------------------------------------"
 
 echo "--=== Version Deployed is [$1] The folowing output from version.info ===--"
 ssh -p 22 $2 "cat $3version.html"
-forever list
+ssh -p 22 $2 "forever list"
+
 echo "------------The-End-------------------------------------------------------"
