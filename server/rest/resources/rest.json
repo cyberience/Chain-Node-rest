@@ -6,7 +6,7 @@
 
   "port": 3000,
   "crossDomainHttpMethods": ["GET", "POST", "PUT", "OPTIONS"],
-  "clientPrivateKey": "7AF0508F3FA061FCCB5BE5C0BA235CE9BA6039AD744703A1A7A3CF9AAF198DD3",
+  "clientPrivateKey": "76F2AC8638C98844C9E0B243555C2DEB5AA9E6BF109914746A172D231AB6BC7E",
   "extensions": ["aggregate", "lock", "multisig", "namespace", "transfer"],
 
   "db": {
@@ -22,7 +22,7 @@
   "apiNode": {
     "host": "127.0.0.1",
     "port": 7900,
-    "publicKey": "75B513BEDB2B706A132E99A3F9B7F42C5CA3B2B531035EA7012F924AD69C639B",
+    "publicKey": "170966E2EFD31C6DDD077CB986591227A349AC9628E8BE7D47ECEDBF5981CB6D",
     "timeout": 1000
   },
 
