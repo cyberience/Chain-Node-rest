@@ -16,7 +16,7 @@ echo "Version $1" > ./server/version.html
 
 echo "--=== Transfer files to remote Server ===--"
 echo "rsync -avzhe ssh  --rsync-path="""rsync""" ./server/ jenkins@$2:$3"""
-rsync -avzhe ssh  --rsync-path="rsync" ./server/bin ./server/rest/node_modules ./server/rest/src ./server/rest/resources jenkins@$2:$3
+rsync -avzhe ssh  --rsync-path="rsync" ./server/version.html ./server/bin ./server/rest/node_modules ./server/rest/src ./server/rest/resources jenkins@$2:$3
 echo "---------------------------------------"
 
 echo "----====== Start up Service ======----"
@@ -28,6 +28,6 @@ ssh -p 22 $2 "ls -al $3"
 echo "---------------------------------------------------------"
 
 echo "--=== Version Deployed is [$1] The folowing output from version.info ===--"
-ssh -p 22 $2 "cat $3/version.html"
+ssh -p 22 $2 "cat $3version.html"
 forever list
 echo "------------The-End-------------------------------------------------------"
