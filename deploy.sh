@@ -10,7 +10,7 @@ echo "No tests yet Defined"
 echo "-----------------------------------------"
 
 #echo "--=== Modify Version Information ===--"
-#echo "Version $1" > ./www/version.html
+echo "Version $1" > ./server/version.html
 #ls  -l
 #echo "--------------------------------------"
 
@@ -29,4 +29,5 @@ echo "---------------------------------------------------------"
 
 echo "--=== Version Deployed is [$1] The folowing output from version.info ===--"
 ssh -p 22 $2 "cat $3/version.html"
+forever list
 echo "------------The-End-------------------------------------------------------"
