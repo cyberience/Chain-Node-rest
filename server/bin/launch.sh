@@ -17,5 +17,5 @@ if [ $? != 0 ]
 then
     echo "Launching Rest Node Application"
     cd ./src
-    forever start -a -o >(logger -t restnode.log) -e >(logger -t restnode.log) restnode.js &
+    BUILD_ID=dontkillme forever start -a -o >(logger -t restnode.log) -e >(logger -t restnode.log) restnode.js &
 fi
