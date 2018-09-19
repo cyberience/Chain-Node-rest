@@ -8,7 +8,7 @@ then
         forever stopall
         npm rebuild zeromq
         cd ./src
-        forever start -a -o >(logger -t noderest.log) -e >(logger -t noderest.log) index.js
+        forever start -a -o >(logger -t noderest.log) -e >(logger -t noderest.log) index.js &&
 fi
 
 ps auxw | grep aen.server | grep -v grep > /dev/null
