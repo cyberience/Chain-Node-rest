@@ -12,7 +12,7 @@ else
 fi
 
 echo "Check the serive is running, if not, then start it."
-ps auxw | grep restnode | grep -v grep > /dev/null
+ps auxw | grep restnode | grep -v grep
 if [ $? != 0 ]
 then
     echo "Launching Rest Node Application"
