@@ -1,9 +1,9 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/restnode.js',
   output: {
-    filename: 'index.js',
+    filename: 'restnode.js',
     path: path.resolve(__dirname, 'dist')
   },
   target:'node',
