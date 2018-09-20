@@ -23,8 +23,9 @@ echo "----====== Start up Service ======----"
 ssh -p 22 $2 "cd $3; pwd; ls -la; chmod +x $3/launch.sh; ./launch.sh 1 "
 
 echo "----====== Start up Service for cron to keep system live ======----"
-ssh -p 22 $2 "echo '*/2 * * * * $3launch.sh' | crontab - "
-ssh -p 22 $2 "echo '*/2 * * * * /var/app/chain-rest-api/launch.sh' | crontab - "
+# Removed because the Chain cron will run the launch script to check its up.
+# ssh -p 22 $2 "echo '*/2 * * * * $3launch.sh' | crontab - "
+# ssh -p 22 $2 "echo '*/2 * * * * /var/app/chain-rest-api/launch.sh' | crontab - "
 echo "---------------------------------------"
 
 echo "----====== Verify Deployments-List from Remote ======----"
