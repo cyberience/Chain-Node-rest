@@ -11,7 +11,7 @@ else
     npm rebuild zeromq
 fi
 
-echo "Check the serive is running, if not, then start it."
+echo "Check the service is running, if not, then start it."
 ps auxw | grep restnode | grep -v grep
 if [ $? != 0 ]
 then
